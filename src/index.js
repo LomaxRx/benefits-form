@@ -7,7 +7,7 @@ import Form from './components/form';
 import { getServiceTypes, postAssistanceRequest } from './lib/actions';
 import Status from './components/status'
 
-class App extends React.Component {
+export class App extends React.Component {
 
   constructor(props){
     super(props);
@@ -116,7 +116,7 @@ class App extends React.Component {
       <div className="container">
         <Status code={statusCode}
           message={statusMessage}
-          statusText={statusText}
+          text={statusText}
           dismiss={this.dismissStatus}
           nextStep={this.resetState}/>
         <div className={`form-wrapper clearfix ${statusCode !== null ? 'blur' : ''}`}>
